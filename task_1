@@ -8,13 +8,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'task 1',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Demo'),
-        ),
-        body: Center(
-          child: Text('Hello, shekhar!'),
+      title: 'Task 1',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyScreen(),
+    );
+  }
+}
+
+class MyScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Screen'),
+      ),
+      body: Center(
+        child: Text(
+          'Hello, Welcome to My Screen!',
+          style: TextStyle(fontSize: 24.0),
         ),
       ),
     );
